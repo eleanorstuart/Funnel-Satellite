@@ -1,3 +1,3 @@
 # Funnel-Satellite
 
-This Django project tracks data from http://nestio.space/api/satellite/data
+This project tracks data from http://nestio.space/api/satellite/data and provides information via a Django development server.
