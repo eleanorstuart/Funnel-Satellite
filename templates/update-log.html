@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div style="text-align:center">
+      <br>
+      <h1>Update Log</h1>
+      <h2 class="lead text-muted">Below is a list of all altitude updates from the current day.</h2>
+    </div>
+
+    {% if updates %}
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Last Updated</th>
+                <th scope="col">Altitude</th>
+                <th scope="col">Minimum over last 5 minutes</th>
+                <th scope="col">Maximum over last 5 minutes</th>
+                <th scope="col">Average over last 5 minutes</th>
+                <th scope="col">Health status</th>
+
+            </tr>
+        </thead>
+        {% for update in updates %}
+
+        <tbody>
+            <tr>
+                <td>
+                    {% if update.last_updated %}
+                      {{ update.last_updated }}
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if update.altitude %}
+                      {{ update.altitude }}
+                    {% endif %}
+
+                </td>
+
+                <td>
+                    {% if update.minimum %}
+                      {{ update.minimum }}
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if update.maximum %}
+                      {{ update.maximum }}
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if update.average %}
+                      {{ update.average }}
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if update.health_msg %}
+                      {{ update.health_msg }}
+                    {% endif %}
+                </td>
+
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>There are no updates.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
