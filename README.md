@@ -11,7 +11,7 @@ These are the steps to run the development server on a computer running Windows 
 * Create a new virtual environment for this project: `$ python3 -m virtualenv funnelenv`
 * Enter the virtual environment: `$ source funnelenv/bin/activate`
 * Within the project folder install the required packages: `$ pip install -r requirements.txt`
-* The redis-server command may not have installed properly, so run `$ sudp apt-install redis-server`
+* The redis-server command may not have installed properly, so run `$ sudo apt-install redis-server`
 
 ### Run the development server
 Open 3 terminals, navigate to the project folder, and enter the virtual environment. 
