@@ -19,6 +19,7 @@ python-crontab==2.5.1
 python-dateutil==2.8.1
 pytz==2021.1
 redis==3.5.3
+redis-server
 six==1.16.0
 sqlparse==0.4.1
 vine==5.0.0
