@@ -1,2 +1,6 @@
 db.sqlite3
 dump.rdb
+.idea/
+*__pycache__*
+*.pyc
+celerybeat-schedule
