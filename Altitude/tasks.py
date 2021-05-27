@@ -11,8 +11,8 @@ from django.utils.timezone import make_aware
 from django.db.models import Avg, Max, Min
 
 
-@shared_task(bind=True)
-def obtain_satellite_data(self):
+@shared_task()
+def obtain_satellite_data():
     '''This task is called every 10 seconds and fills in a new AltUpdate object with data from the satellite update page'''
 
     url = 'http://nestio.space/api/satellite/data'
