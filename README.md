@@ -13,7 +13,7 @@ These are the steps to run the development server on a computer running Windows 
 * Within the project folder install the required packages: `$ pip install -r requirements.txt`
 
 ### Run the development server
-Open 3 terminals, navigate to the project folder, and enter the virtual environment. 
+Open 3 terminals. In each of them, navigate to the project folder and enter the virtual environment. 
 * The first terminal is used to start Redis: `$ redis-server`
 * The second terminal is used to start Celery: `$ celery -A FunnelSatellite worker -B -l INFO`
 * The third terminal is used to start Django: `$ python manage.py runserver`
